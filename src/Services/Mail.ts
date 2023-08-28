@@ -9,7 +9,7 @@ var imap = new Imap({
     port: process.env.IMAP_PORT as unknown as number,
     tls: true,
     tlsOptions: {
-        host: "imap.gmail.com",
+        host: process.env.IMAP_HOST,
         rejectUnauthorized: false
     }
 });
